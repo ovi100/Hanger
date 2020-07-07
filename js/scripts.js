@@ -1,10 +1,12 @@
 $(document).ready(function(){
 	$(".search-input").focus(function (){
         $(".search-suggestions").fadeIn("slow");
+        $(".search-box").find(".input-group").css("border-color","#000");
     });
 
     $(".search-input").blur(function (){
         $(".search-suggestions").fadeOut("slow");
+        $(".search-box").find(".input-group").css("border-color","#ddd");
     });
 
   	var menuHeight = $(".menu1").height();

@@ -7,6 +7,7 @@
 
     <!-- Required CSS -->
     <link rel="stylesheet" href="css/bootstrap-4.5.min.css">
+    <link rel="stylesheet" href="css/icofont.min.css">
     <link rel="stylesheet" href="css/fancybox.min.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
@@ -159,7 +160,8 @@
         <div class="sidenav-overlay" id="sidenav-overlay"></div>
     </div>
     <div class="menu">
-        <div class="menu-top">
+        <div class="menu-top"></div>
+        <div class="menu-middle">
             <div class="container-fluid">
                 <div class="row align-items-center">
                     <div class="col-lg-1 col-md-1 col-sm-1 col-2 sidebar-toggle-col">
@@ -175,13 +177,36 @@
                     <div class="col-xl-2 col-lg-2 col-md-3 col-sm-3 col-4">
                         <div class="logo">
                             <a href="">
-                                <img class="img-fluid" src="https://placehold.jp/220x90.png" alt="logo">
+                                <img class="img-fluid" src="https://placehold.jp/229x48.png" alt="logo">
                             </a>
                         </div>
                     </div>
                     <div class="col-xl-2 col-lg-2 col-md-8 col-sm-8 col-6 order-lg-12">
                         <div class="menu-icons">
                             <ul>
+                                <li class="fm-search-icon">
+                                    <a href="">
+                                        <svg width="25px" height="25px" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                                            <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="login.html">
+                                        <svg width="28px" height="28px" viewBox="0 0 16 16" class="bi bi-person" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M13 14s1 0 1-1-1-4-6-4-6 3-6 4 1 1 1 1h10zm-9.995-.944v-.002.002zM3.022 13h9.956a.274.274 0 0 0 .014-.002l.008-.002c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664a1.05 1.05 0 0 0 .022.004zm9.974.056v-.002.002zM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <svg width="25px" height="25px" viewBox="0 0 16 16" class="bi bi-heart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                                        </svg>
+                                        <span class="wishlist-count">0</span>
+                                    </a>
+                                </li>
                                 <li>
                                     <a href="">
                                         <svg width="25px" height="25px" viewBox="0 0 16 16" class="bi bi-bag" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -191,24 +216,7 @@
                                         <span class="cart-count">0</span>
                                     </a>
                                 </li>
-                                <li class="has-dropdown">
-                                    <a>
-                                        <svg width="28px" height="28px" viewBox="0 0 16 16" class="bi bi-person" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" d="M13 14s1 0 1-1-1-4-6-4-6 3-6 4 1 1 1 1h10zm-9.995-.944v-.002.002zM3.022 13h9.956a.274.274 0 0 0 .014-.002l.008-.002c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664a1.05 1.05 0 0 0 .022.004zm9.974.056v-.002.002zM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                                        </svg>
-                                    </a>
-                                    <div class="small-dropdown-content">
-                                        <a href="#" class="dropdown-link">Login</a>
-                                        <a href="#" class="dropdown-link">Register</a>
-                                    </div>
-                                </li>
-                                <li class="mobile-login">
-                                    <a href="">
-                                        <svg width="28px" height="28px" viewBox="0 0 16 16" class="bi bi-person" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" d="M13 14s1 0 1-1-1-4-6-4-6 3-6 4 1 1 1 1h10zm-9.995-.944v-.002.002zM3.022 13h9.956a.274.274 0 0 0 .014-.002l.008-.002c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664a1.05 1.05 0 0 0 .022.004zm9.974.056v-.002.002zM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                                        </svg>
-                                    </a>
-                                </li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -216,9 +224,21 @@
                         <div class="search-box" id="search-box">
                             <form action="">
                                 <div class="input-group">
-                                    <input type="text" class="form-control form-control-lg shadow-none search-input" placeholder="search anything..........">
+                                    <input type="text" class="form-control form-control-lg shadow-none search-input" placeholder="product search">
                                     <div class="input-group-append">
-                                        <button class="btn btn-success" type="submit"><i class="icofont-search-1"></i></button>
+                                        <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">select category</button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">only category</a>
+                                            <a class="dropdown-item" href="#">category 1</a>
+                                            <a class="dropdown-item" href="#">category 2</a>
+                                            <a class="dropdown-item" href="#">category 3</a>
+                                            <a class="dropdown-item" href="#">category 4</a>
+                                            <a class="dropdown-item" href="#">category 5</a>
+                                            <a class="dropdown-item" href="#">category 6</a>
+                                            <a class="dropdown-item" href="#">category 7</a>
+                                            <a class="dropdown-item" href="#">category 8</a>
+                                        </div>
+                                        <button class="btn" type="submit"><i class="icofont-search-1"></i></button>
                                     </div>
                                 </div>
                             </form>
@@ -283,7 +303,6 @@
                 </div>
             </div>
         </div>
-        <div class="menu-middle"></div>
         <div class="menu-bottom">
             <div class="container-fluid">
                 <div class="row align-items-center">

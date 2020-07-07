@@ -37,6 +37,7 @@ a{
 
 body{
     font-family: $theme-font;
+    height: 2000px;
 }
 
 // Custom CSS For scrollbar
@@ -64,13 +65,14 @@ body{
 
 .menu{
     @include position-sticky();
-    background: #262626;
+    background: $wcolor;
+    @include box-shadow(0 2px 3px rgba(0,0,0,0.08));
     z-index: 110;
     .has-dropdown{
         .small-dropdown-content{
             position: absolute;
             top: 55px;
-            right: 30px;
+            right: 80px;
             min-width: 50%;
             max-width: 100%;
             background: $wcolor;
@@ -128,7 +130,8 @@ body{
             }
         }
     }
-    .menu-top{
+    .menu-top{}
+    .menu-middle{
         padding: 10px 0;
         .sidebar-toggle-col{
             display: none;
@@ -145,18 +148,44 @@ body{
         }
         .search-box{
             .input-group{
+                border-bottom: 1px solid #ddd;
+                @include transition(all,0.5s,ease);
                 .search-input{
-                    &:focus{
-                        border-color: #ced4da;
-                    }
+                    border: 0;
+                    @include border-radius(0);
                 }
                 button{
-                    padding: 10px 25px;
+                    border: 0;
+                    @include border-radius(0);
+                    color: #909090;
+                    padding: 10px;
+                    &:focus{
+                        @include box-shadow(none);
+                    }
+                }.dropdown-toggle{
+                    &:after{
+                        content: "\eac8";
+                        border: 0;
+                        font-family: IcoFont!important;
+                        vertical-align: middle;
+                    }
+                }
+                .dropdown-toggle-split{
+                    &:after{
+                        margin-left: 10px;
+                    }
+                }
+                .dropdown-menu{
+                    left: -10px !important;
+                    @include border-radius(0);
+                }
+                &:focus{
+                    border-color: #000;
                 }
             }
             .search-suggestions{
                 position: absolute;
-                top: 48px;            
+                top: 50px;            
                 max-height: calc(100vh - 50px);
                 width: 97.6%;
                 background: #fff;
@@ -209,27 +238,28 @@ body{
                     display: inline-block;
                     margin: 0 15px;
                     a{
-                        color: $wcolor;
+                        color: $bcolor;
                     }
-                }
-                .mobile-login{
-                    display: none;
                 }
             }
             .cart-count{
                 position: absolute;
                 top: 0;
-                right: 80px;
+                right: 20px;
                 width: 18px;
                 height: 18px;
-                background: $wcolor;
+                background: $bcolor;
                 @include border-radius(50%);
-                color: $bcolor;
+                color: $wcolor;
                 font-size: 12px;
                 font-weight: 600;
                 line-height: 20px;
                 text-align: center;
                 vertical-align: middle;
+            }
+            .wishlist-count{
+                @extend .cart-count;
+                right: 75px;
             }
         }
     }
@@ -240,7 +270,7 @@ body{
                 display: inline-block;
                 margin-right: 15px;
                 a{
-                    color: $wcolor;
+                    color: $bcolor;
                     font-size: 18px;
                     text-transform: capitalize;
                 }
@@ -382,9 +412,6 @@ body{
             ul{
                 .has-dropdown{
                     display: none;
-                }
-                .mobile-login{
-                    display: inline-block;
                 }
             }
         }
